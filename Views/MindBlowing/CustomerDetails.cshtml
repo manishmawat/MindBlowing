@@ -1,0 +1,24 @@
+﻿@model MindBlowing.Models.CustomerDetailViewModel
+@{
+    ViewBag.Title = "CustomerDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CustomerDetails</h2>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Customer ID</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.customer.Name</td>
+                <td>@Model.customer.CustomerID</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

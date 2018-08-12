@@ -1,0 +1,26 @@
+﻿@model MindBlowing.Models.CustomerViewModel
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer</h2>
+@{ 
+    var propClass = Model.Customers.Count == 0 ? "EmptyClass" : "ItemClass";
+}
+<div class=propclass>
+    @if (Model.Customers.Count == 0)
+    {
+        <text> There is no customer in the system.</text>
+    }
+    else
+    {
+        <ul>
+            @foreach (var item in Model.listOfCutomer)
+            {
+                <li>@Html.ActionLink(item.Name, @"/customers/" + item.CustomerID) </li>
+            }
+        </ul>
+    }
+
+</div>

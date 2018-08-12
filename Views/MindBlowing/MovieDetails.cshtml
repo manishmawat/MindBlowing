@@ -1,0 +1,20 @@
+﻿@model MindBlowing.Models.MovieDetailsViewModel
+@{
+    ViewBag.Title = "MovieDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MovieDetails</h2>
+
+<div>
+    <table>
+        <tr>
+            <td>Moview Name: </td>
+            <td>@Model.movie.MovieName</td>
+        </tr>
+        <tr>
+            <td>Movie ID:</td>
+            <td>@Model.movie.MoviewId</td>
+        </tr>
+    </table>
+</div>

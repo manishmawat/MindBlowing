@@ -1,0 +1,36 @@
+﻿@model MindBlowing.Models.MovieViewModel
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+@if (Model.listOFMovies.Count == 0)
+{
+    <text>There is no movie in the system.</text>
+}
+else
+{
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Movie Name</td>
+                <td>Moview Id</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        @foreach (var item in Model.listOFMovies)
+                        {
+                            <li>@Html.ActionLink(item.MovieName, @"/movies/" + item.MoviewId)</li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+}
